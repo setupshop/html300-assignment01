@@ -4,3 +4,43 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.canvas {
+  position: absolute;
+  background-color: $gray;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+//define the actual card in relation to it's background
+  &__card {
+    background-color: $white;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 1px;
+//alocate 40% of the card for the image and name section
+    &__left {
+      width: 40%;
+//style the headshot image
+      &__img {
+        height: 20%;
+        width: 80%;
+        border-radius: 50%;
+        margin: 2rem;
+      }
+//align the name and tile to be centered under the image
+      &__text {
+        padding-left: 5rem;
+      }
+    }
+//alocate 60% of the card to the information section
+    &__right {
+      width: 60%;
+      margin: 1rem;
+      padding: 1rem;
+      background-color: $specialGray;
+//float the linked in image to the left
+      &__img {
+        float: left;
+      }
+    }
+  }
+}
